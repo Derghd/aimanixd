@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext,vietnamese');
+
+:root {
+	--blue: #102770;
+	--white: #ffffff;
+	--yellow: #ffeba7;
+	--purple: #9b59b6;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+::selection {
+	color: var(--yellow);
+	background-color: var(--blue);
+}
+::-moz-selection {
+	color: var(--yellow);
+	background-color: var(--blue);
+}
+body{
+	width: 100%;
+	display: block;
+	overflow-x: hidden;
+	background-color: #1f2029;
+  	color: #c4c3ca;
+	font-family: 'Muli', sans-serif;
+}
+
+
+.start-header {
+	opacity: 1;
+	transform: translateY(0);
+	padding: 20px 0;
+	box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.start-header.scroll-on {
+	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+	padding: 10px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+
+.navigation-wrap{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+} 
+.navigation-wrap .navbar-collapse{
+	flex-grow: 0.5;
+	
+}
+.navigation-wrap ul{
+	margin: 0;
+}
+.navbar{
+	padding: 0;
+}
+.navbar-toggler {
+	float: right;
+	border: none;
+	padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+	outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+	width: 24px;
+	height: 17px;
+	background-image: none;
+	position: relative;
+	border-bottom: 1px solid #000;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after, 
+.navbar-light .navbar-toggler-icon:before{
+	width: 24px;
+	position: absolute;
+	height: 1px;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after{
+	top: 8px;
+}
+
+.nav-link{
+	color: #212121 !important;
+	font-weight: 500;
+    transition: all 200ms linear;
+}
+.nav-item:hover .nav-link{
+	color: #8167a9 !important;
+}
+.nav-item.active .nav-link{
+	color: #777 !important;
+}
+.nav-link {
+	position: relative;
+	padding: 5px 0 !important;
+	display: inline-block;
+}
+.nav-item:after{
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: '';
+	background-color: #8167a9;
+	opacity: 0;
+    transition: all 200ms linear;
+}
+.nav-item:hover:after{
+	bottom: 0;
+	opacity: 1;
+}
+.nav-item.active:hover:after{
+	opacity: 0;
+}
+.nav-item{
+	position: relative;
+    transition: all 200ms linear;
+}
+
+.cursor2.hover,
+.cursor3.hover{
+	height: 220px;
+	width: 320px;
+	border:none;
+	border-radius: 8px;
+}
+.cursor,
+.cursor2,
+.cursor3{
+	position: fixed;
+	border-radius: 50%;	
+	transform: translateX(-50%) translateY(-50%);
+	pointer-events: none;
+	left: -100px;
+	top: 50%
+}
+.cursor{
+	background-color: #fff;
+	height: 0;
+	width: 0;
+	z-index: 99999;
+}
+.cursor2,.cursor3{
+	height: 36px;
+	width: 36px;
+	
+	-webkit-transition:all 0.3s ease-out;
+	transition:all 0.3s ease-out
+}
+.cursor2{
+	border: 2px solid #0eee51;
+	box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+}
+
+.padding-top-bottom {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.over-hide{
+	overflow: hidden;
+}
+.background-dark {
+	background-color: #101010;
+}
+.project-link-wrap{
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.project-link-wrap p{
+	font-size: 100px;
+	line-height: 80px;
+	color: #c4c3ca;
+	font-weight: 900;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+	opacity: 0.35;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.project-link-wrap:hover p{
+	opacity: 0.15;
+}
+
+.scroll-to-top{
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	opacity: 0;
+	visibility: hidden;
+	width: 10px;
+	height: 40px;
+	z-index: 251;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 10px 40px;
+	cursor: pointer;
+	background-image: url('http://www.ivang-design.com/svg-load/parallax/arrow-up.png');
+	transform: translateY(-15px);
+	-webkit-transition: all 250ms linear;
+	transition: all 250ms linear; 
+}
+.scroll-to-top:hover{
+	bottom: 32px;
+}
+.scroll-to-top.active-arrow{
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
